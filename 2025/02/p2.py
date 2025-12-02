@@ -34,15 +34,15 @@ lines = read_lines(p)
 all_ranges = [t for line in lines for t in id_tuples(line)]
 
 for id_range in all_ranges:
-    for i in range(id_range[0], id_range[1] + 1):  # +1 to include the end
+    for i in range(id_range[0], id_range[1] + 1):  
         s = str(i)
         length = len(s)
         is_invalid = False
         
-        for j in range(1, length // 2 + 1):  # Check all possible chunk sizes
-            if length % j == 0:  # Only check if evenly divisible
+        for j in range(1, length // 2 + 1):  
+            if length % j == 0:  
                 chunks = split_into_chunks(s, j)
-                if len(set(chunks)) == 1:  # All chunks are identical
+                if len(set(chunks)) == 1: 
                     is_invalid = True
                     break
         
