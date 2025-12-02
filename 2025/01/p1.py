@@ -1,4 +1,3 @@
-# ...existing code...
 from typing import Iterator, List
 
 current_dial: int = 50
