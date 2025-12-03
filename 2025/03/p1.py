@@ -11,19 +11,15 @@ def max_id_in_list(id_list):
 
 max_ids = []
 
-# Method 1: Simple loop with readlines()
 with open('batteries.txt', 'r') as file:
     lines = file.readlines()
     for line in lines:
-        line = line.strip()  # Remove newline characters
+        line = line.strip()  
 
-
-# Method 2: Direct iteration (most Pythonic)
 with open('batteries.txt', 'r') as file:
     for line in file:
         line = line.strip()
 
-# Method 3: If you need line numbers
 with open('batteries.txt', 'r') as file:
     for i, line in enumerate(file, 1):
         line = line.strip()
