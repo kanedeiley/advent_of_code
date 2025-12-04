@@ -14,6 +14,7 @@ def get_max_id(battery):
         max_index = battery.find(max_digit, start_index, search_end)
         
         max_id += max_digit
+        
         start_index = max_index + 1
         
 
